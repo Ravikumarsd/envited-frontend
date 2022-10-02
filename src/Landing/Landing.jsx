@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import EventCard from "../EventCard/EventCard";
 
 const Landing = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="text-center text-4xl font-semibold mt-12">
@@ -25,6 +27,7 @@ const Landing = () => {
       <div className="flex justify-center items-center flex-col mt-10 mb-10">
         <EventCard />
         <button
+          onClick={() => navigate("/event")}
           className="text-white pl-6 pr-6 pt-2 pb-2 mt-6 mb-6 rounded-lg"
           style={{
             background:
